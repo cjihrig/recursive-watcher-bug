@@ -14,4 +14,6 @@ const watcher = watch(tmpDir, { recursive: true }, (eventType, filename) => {
   console.log(eventType, filename);
 });
 
-writeFileSync(filename, 'foobar');
+setTimeout(() => {
+  writeFileSync(filename, 'foobar');
+}, 10_000);
